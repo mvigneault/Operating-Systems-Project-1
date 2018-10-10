@@ -1,0 +1,55 @@
+import java.awt.*;  
+
+import javax.swing.*;  
+
+public class UserInterface {  
+
+	
+	public UserInterface(){
+		JFrame f= new JFrame("Operating System");
+		f.setSize(900,900);
+		f.setLayout(null);
+		f.setVisible(true);
+		f.setResizable(false);
+		
+		JPanel panel=new JPanel();
+		f.add(panel);
+		panel.setSize(900,900);
+		panel.setBackground(Color.gray);
+
+		
+		// buttons creation on panel
+		JButton b1=new JButton("Add Process");
+		b1.setBounds(600,20,150,35);
+		JButton b2=new JButton("Delete Process");
+		b2.setBounds(375,20,150,35);
+		JButton b3=new JButton("Update Process");
+		b3.setBounds(150,20,150,35);
+		
+		//print out button on user interface
+		panel.add(b1); panel.add(b2);panel.add(b3);  
+		
+		Panel1 one = new Panel1();
+		panel.add(one);
+		one.panelle();
+		
+		
+		
+		
+	}
+	
+	public void paint(Graphics g){   
+	    g.setColor(Color.white);  
+	    g.fillRect(230,80,10,10);  
+	  }
+	
+	
+	
+	public static void main(String args[]){
+		new UserInterface();
+	}
+	
+
+			     
+}
+
