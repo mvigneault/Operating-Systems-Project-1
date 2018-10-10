@@ -1,0 +1,33 @@
+// Test for the Linked-List Queue
+
+public class TestProcessQueueLL {
+    public static void main(String[] args){
+	ProcessQueueLL a = new ProcessQueueLL();
+	Node xNode = new Node(1, 123456789,1,2,3,4,"Run", "Active", false);
+	Node yNode = new Node(12, 1234789,13,22,34,45, "Ready" ,"Inactive" ,true);
+	Node zNode = new Node(2, 14789,3,2,4,5, "Suspended" ,"Inactive", false);
+	Node kNode = new Node(26, 164789,33,26,42,25, "Blocked", "Active", true);
+	a.enqueue(xNode);
+	a.enqueue(yNode);
+	a.enqueue(zNode);
+	a.enqueue(kNode);
+	a.printQueue();
+	System.out.println();
+	System.out.println(a.front().getID());
+	System.out.println();
+	a.printQueue();
+	System.out.println();
+	System.out.println(a.dequeue().getID());
+	System.out.println();
+	a.printQueue();
+	System.out.println();
+	System.out.println(a.isEmpty());
+	while(!a.isEmpty()) {
+	    System.out.println(a.dequeue().getID());
+	    System.out.println();
+	}
+    	a.printQueue();
+	System.out.println(a.isEmpty());
+	System.out.println();
+    }
+}
