@@ -1,0 +1,128 @@
+//Create a class call Node 
+
+public class Node {
+	//declare variables
+	private int ID;
+	private Node next;
+	private int Memory;
+	private int CPU;
+	private int MemoryLocation;
+	private int Priority;
+	private int ProgramCounter;
+	private String StatusRegisters;
+	private String Status;
+	private boolean IORequirement;
+	
+	//contructor that creates a node with a name, SSN
+	public Node (int ID, Node next, int Memory, int CPU, int MemoryLocation, int Priority, int ProgramCounter, String Status, String StatusRegisters, boolean IORequirement){
+		this.ID = ID;
+		this.next = next;
+		this.Memory = Memory;
+		this.CPU = CPU;
+		this.MemoryLocation = MemoryLocation;
+		this.Priority = Priority;
+		this.ProgramCounter = ProgramCounter;
+		this.setStatus(Status);
+		this.StatusRegisters = StatusRegisters;
+		this.setIORequirement(IORequirement);
+	}
+
+	/*Need 2 contructors because Java can't
+	support if next is equal to null or to another node.*/  
+	public Node (int ID, int Memory, int CPU, int MemoryLocation, int Priority, int ProgramCounter, String Status, String StatusRegisters, boolean IORequirement){
+		this.ID = ID;
+		this.Memory = Memory;
+		this.CPU = CPU;
+		this.MemoryLocation = MemoryLocation;
+		this.Priority = Priority;
+		this.ProgramCounter = ProgramCounter;
+		this.Status = Status;
+		this.StatusRegisters = StatusRegisters;
+		this.IORequirement = IORequirement;
+		next = null;
+	}
+
+	
+	//setters and getters of the declared variables.
+	//allows you to get and set the variables created. 
+
+	public Node getNext() {
+		return next;
+	}
+	public void setNext(Node next) {
+		this.next = next;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int ID) {
+		this.ID = ID;
+	}
+
+	public int getMemory() {
+		return Memory;
+	}
+
+	public void setMemory(int Memory) {
+		this.Memory = Memory;
+	}
+
+	public int getCPU() {
+		return CPU;
+	}
+
+	public void setCPU(int CPU) {
+		this.CPU = CPU;
+	}
+
+	public int getMemoryLocation() {
+		return MemoryLocation;
+	}
+
+	public void setMemoryLocation(int MemoryLocation) {
+		this.MemoryLocation = MemoryLocation;
+	}
+
+	public int getPriority() {
+		return Priority;
+	}
+
+	public void setPriority(int Priority) {
+		this.Priority = Priority;
+	}
+
+	public int getProgramCounter() {
+		return ProgramCounter;
+	}
+
+	public void setProgramCounter(int ProgramCounter) {
+		this.ProgramCounter = ProgramCounter;
+	}
+
+	public boolean isIORequirement() {
+		return IORequirement;
+	}
+
+	public void setIORequirement(boolean IORequirement) {
+		this.IORequirement = IORequirement;
+	}
+
+	public String getStatusRegisters() {
+		return StatusRegisters;
+	}
+
+	public void setStatusRegisters(String StatusRegisters) {
+		this.StatusRegisters = StatusRegisters;
+	}
+
+	public String getStatus() {
+		return Status;
+	}
+
+	public void setStatus(String Status) {
+		this.Status = Status;
+	}
+	
+}
